@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: task-management-api-config
+data:
+  appsettings.json: |
+    {
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft": "Warning",
+          "Microsoft.Hosting.Lifetime": "Information"
+        }
+      },
+      "ConnectionStrings": {
+        "DefaultConnection": "Server=mssql-service;Database=TaskManagement;User Id=sa;Password=YourStrongPassword123!;TrustServerCertificate=True;"
+      },
+      "AWS": {
+        "Region": "us-east-1",
+        "UserPoolId": "YOUR_USER_POOL_ID",
+        "AppClientId": "YOUR_APP_CLIENT_ID"
+      }
+    }
